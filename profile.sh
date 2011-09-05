@@ -1,4 +1,4 @@
-. $HOME/dotfiles/git-completion.bash
+source $HOME/dotfiles/git-completion.bash
 export GIT_PS1_SHOWDIRTYSTATE=true
 
 yellow='\033[1;33m'

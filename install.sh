@@ -2,7 +2,7 @@ TARGET=$HOME
 DOTFILES=$PWD
 
 # Profile junk
-echo -e "\n. $DOTFILES/profile.sh\n" >> $TARGET/.profile
+echo -e "\nsource $DOTFILES/bashrc.sh\n" >> $TARGET/.bashrc
 
 # Git junk
 ln -s $DOTFILES/gitconfig $TARGET/.gitconfig
