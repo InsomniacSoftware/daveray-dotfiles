@@ -1,0 +1,13 @@
+.*.swp
+.*.swo
+.DS_Store?
+ehthumbs.db
+Icon?
+Thumbs.db
+*.com
+*.class
+*.dll
+*.exe
+*.o
+*.so
+
