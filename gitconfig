@@ -32,7 +32,7 @@
     ign = ls-files -o -i --exclude-standard
 
 [core]
-	excludesfile = /home/ray/.gitignore
+	excludesfile = ~/.gitignore
 
 [branch]
   autosetupmerge = true
