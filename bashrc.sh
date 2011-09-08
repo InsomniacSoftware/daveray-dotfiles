@@ -1,3 +1,4 @@
+export PATH="$PATH:$HOME/bin"
 source $HOME/.dotfiles/git-completion.bash
 export GIT_PS1_SHOWDIRTYSTATE=true
 
