@@ -3,6 +3,7 @@ DOTFILES=$PWD
 
 # Profile junk
 echo -e "\nsource $DOTFILES/bashrc.sh\n" >> $TARGET/.bashrc
+ln -s $DOTFILES/inputrc.rc $TARGET/.inputrc
 
 # Git junk
 ln -s $DOTFILES/gitconfig $TARGET/.gitconfig
