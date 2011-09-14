@@ -1,4 +1,6 @@
 export PATH="$PATH:$HOME/bin"
+export HISTIGNORE="&:cd:ls:[bf]g:exit:pwd:clear:mount:git st*:hg st*:eclipse:history:gvim:vim:[ \t]*"
+
 source $HOME/.dotfiles/git-completion.bash
 export GIT_PS1_SHOWDIRTYSTATE=true
 
@@ -11,5 +13,4 @@ fgcolor="\033[0m" # unsets color to term's fg color
 
 gitprompt='$(__git_ps1 "[%s]")'
 hgprompt='`hg prompt "[{branch}{status}{update}]" 2> /dev/null`'
-
 export PS1="\[$yellow\][\!,\$?] \[$blue\]\W \[$cyan\]${hgprompt}\[$green\]${gitprompt}\[$fgcolor\]\$ "
