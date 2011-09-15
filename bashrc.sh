@@ -2,6 +2,8 @@ export PATH="$PATH:$HOME/bin"
 export HISTIGNORE="&:cd:ls:[bf]g:exit:pwd:clear:mount:git st*:hg st*:eclipse:history:gvim:vim:[ \t]*"
 
 source $HOME/.dotfiles/git-completion.bash
+source $HOME/.dotfiles/hg-completion.bash
+
 export GIT_PS1_SHOWDIRTYSTATE=true
 
 yellow='\033[1;33m'
