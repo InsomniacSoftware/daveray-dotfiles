@@ -1,4 +1,4 @@
-export PATH="$PATH:$HOME/bin"
+export PATH="$PATH:/usr/texbin/:$HOME/bin"
 export HISTIGNORE="&:cd:ls:[bf]g:exit:pwd:clear:mount:git st*:hg st*:eclipse:history:gvim:vim:[ \t]*"
 
 source $HOME/.dotfiles/git-completion.bash
