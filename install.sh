@@ -19,4 +19,7 @@ echo -e "runtime gvimrc.vim\n" > $TARGET/.gvimrc
 make -C $TARGET/.vim/bundle/vimclojure-2.2.0/lib/nailgun
 mkdir $TARGET/vimbak
 
+# Openbox config
+mkdir -p $TARGET/.config/openbox/
+ln -s $DOTFILES/openboxrc.xml $TARGET/.config/openbox/rc.xml
 
