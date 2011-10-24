@@ -21,5 +21,5 @@ mkdir $TARGET/vimbak
 
 # Openbox config
 mkdir -p $TARGET/.config/openbox/
-ln -s $DOTFILES/openboxrc.xml $TARGET/.config/openbox/rc.xml
+ln -s $DOTFILES/openboxrc $TARGET/.config/openbox
 
