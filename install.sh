@@ -23,3 +23,6 @@ mkdir $TARGET/vimbak
 mkdir -p $TARGET/.config/openbox/
 ln -s $DOTFILES/openboxrc $TARGET/.config/openbox
 
+# Vimperator
+ln -s $DOTFILES/vimperatorrc.vim $TARGET/.vimperatorrc
+
