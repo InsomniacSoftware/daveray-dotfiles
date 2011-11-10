@@ -1,0 +1,7 @@
+" http://cgdb.sourceforge.net/docs/cgdb-no-split.html
+set winsplit=top_big
+set ignorecase
+set arrowstyle=long
+set showtgdbcommands
+set tabstop=2
+

@@ -23,6 +23,10 @@ mkdir $TARGET/vimbak
 mkdir -p $TARGET/.config/openbox/
 ln -s $DOTFILES/openboxrc $TARGET/.config/openbox
 
+# cgdb config
+mkdir -p $TARGET/.cgdb/
+ln -s $DOTFILES/cgdbrc $TARGET/.cgdb/cgdbrc
+
 # Vimperator
 ln -s $DOTFILES/vimperatorrc.vim $TARGET/.vimperatorrc
 
