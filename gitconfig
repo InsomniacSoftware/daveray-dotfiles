@@ -41,3 +41,9 @@
 
 [branch]
   autosetupmerge = true
+
+[merge]
+  tool = vimdiff3
+
+[mergetool "vimdiff3"]
+  cmd = gvim --nofork -d  -c \"wincmd J\" \"$MERGED\" \"$BASE\" \"$LOCAL\" \"$REMOTE\"
