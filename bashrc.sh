@@ -4,6 +4,7 @@ export HISTCONTROL=ignoreboth
 
 source $HOME/.dotfiles/git-completion.bash
 source $HOME/.dotfiles/hg-completion.bash
+source $HOME/.dotfiles/lein-completion.bash
 
 export GIT_PS1_SHOWDIRTYSTATE=true
 
