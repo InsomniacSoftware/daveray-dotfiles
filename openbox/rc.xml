@@ -175,6 +175,9 @@
   </dock>
   <keyboard>
     <chainQuitKey>C-g</chainQuitKey>
+    <keybind key="W-F5">
+      <action name="Reconfigure"/>
+    </keybind>
     <!-- Keybindings for desktop switching -->
     <keybind key="W-k">
       <action name="DesktopUp">
@@ -304,6 +307,30 @@
       <action name="GrowToEdgeEast"/>
       <action name="MaximizeVert"/>
     </keybind>
+
+    <!-- Resize windows horizontally. My windows are almost always
+         full height, so I don't have keys for vertical -->
+    <keybind key="W-C-h">
+      <action name="ResizeRelative">
+        <left>5</left>
+      </action>
+    </keybind>
+    <keybind key="W-C-j">
+      <action name="ResizeRelative">
+        <left>-5</left>
+      </action>
+    </keybind>
+    <keybind key="W-C-l">
+      <action name="ResizeRelative">
+        <right>5</right>
+      </action>
+    </keybind>
+    <keybind key="W-C-k">
+      <action name="ResizeRelative">
+        <right>-5</right>
+      </action>
+    </keybind>
+
     <!-- Misc Window Actions -->
     <keybind key="W-w">
       <action name="Close"/>
