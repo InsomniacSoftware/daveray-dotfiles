@@ -1,4 +1,4 @@
-export PATH="$PATH:/usr/texbin/:$HOME/bin"
+export PATH="$PATH:/usr/texbin/:$HOME/bin:$HOME/.dotfiles/bin"
 export HISTIGNORE="cd:ls:[bf]g:exit:pwd:clear:mount:git st*:hg st*:eclipse:history:gvim:vim"
 export HISTCONTROL=ignoreboth
 
@@ -33,3 +33,9 @@ function title() {
     # If terminal support separate window title, change window title as well
     [ $ansiNrWindow -a "$2" ] && echo -n $'\e'"]$ansiNrWindow;$2"$'\a'
 }
+
+function p() {
+  title $1
+  source "$HOME/.projects/$1.sh"
+}
+

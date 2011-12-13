@@ -30,3 +30,6 @@ ln -s $DOTFILES/cgdbrc $TARGET/.cgdb/cgdbrc
 # Vimperator
 ln -s $DOTFILES/vimperatorrc.vim $TARGET/.vimperatorrc
 
+# Project management
+mkdir -p $TARGET/.projects/
+
