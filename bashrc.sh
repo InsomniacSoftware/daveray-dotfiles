@@ -1,6 +1,7 @@
 export PATH="$PATH:/usr/texbin/:$HOME/bin:$HOME/.dotfiles/bin"
 export HISTIGNORE="cd:ls:[bf]g:exit:pwd:clear:mount:git st*:hg st*:eclipse:history:gvim:vim"
 export HISTCONTROL=ignoreboth
+export EDITOR=vim
 
 source $HOME/.dotfiles/git-completion.bash
 source $HOME/.dotfiles/hg-completion.bash
