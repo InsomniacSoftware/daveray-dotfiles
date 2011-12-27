@@ -3,10 +3,10 @@ set editing-mode vi
 set keymap vi-command
 "gg": beginning-of-history
 "G": end-of-history
-"gd":edit-and-execute-command
+"g;":edit-and-execute-command
 
 set keymap vi-insert
-"kj": vi-movement-mode
+"jk": vi-movement-mode
 "\C-a": beginning-of-line
 "\C-e": end-of-line
 "\C-l": clear-screen
