@@ -5,6 +5,9 @@ DOTFILES=$PWD
 echo -e "\nsource $DOTFILES/bashrc.sh\n" >> $TARGET/.bashrc
 ln -s $DOTFILES/inputrc.rc $TARGET/.inputrc
 
+# tmux junk
+ln -s $DOTFILES/tmux.conf $TARGET/.tmux.conf
+
 # Git junk
 ln -s $DOTFILES/gitconfig $TARGET/.gitconfig
 ln -s $DOTFILES/gitignore $TARGET/.gitignore
