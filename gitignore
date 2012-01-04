@@ -11,3 +11,4 @@ Thumbs.db
 *.o
 *.so
 *.pyc
+.lein-deps-sum
