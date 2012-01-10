@@ -2,9 +2,12 @@ export PATH="$PATH:/usr/texbin/:$HOME/bin:$HOME/.dotfiles/bin"
 export HISTIGNORE="cd:ls:[bf]g:exit:pwd:clear:mount:git st*:hg st*:eclipse:history:gvim:vim"
 export HISTCONTROL=ignoreboth
 
+# Run gvim in terminal mode so we get nice colors
 alias vim="gvim -v"
 export EDITOR="gvim -v"
 
+# Tell tmux out term has color
+alias tmux="tmux -2"
 
 source $HOME/.dotfiles/git-completion.bash
 source $HOME/.dotfiles/hg-completion.bash
