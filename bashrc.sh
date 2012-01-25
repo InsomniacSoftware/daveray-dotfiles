@@ -49,3 +49,8 @@ function p() {
   source "$HOME/.projects/$1.sh"
 }
 
+# grep history
+function gh() {
+  history | grep $*
+}
+
