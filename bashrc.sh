@@ -54,3 +54,11 @@ function gh() {
   history | grep $*
 }
 
+# open a file
+function view() {
+  if which xdg-open > /dev/null
+  then
+    xdg-open $1
+  fi
+}
+
