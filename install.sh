@@ -33,6 +33,12 @@ ln -s $DOTFILES/cgdbrc $TARGET/.cgdb/cgdbrc
 # Vimperator
 ln -s $DOTFILES/vimperatorrc.vim $TARGET/.vimperatorrc
 
+# Make ack ack
+if which ack-grep > /dev/null
+then
+  ln -s `which ack-grep` $TARGET/bin/ack
+fi
+
 # Project management
 mkdir -p $TARGET/.projects/
 
