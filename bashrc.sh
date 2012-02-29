@@ -58,7 +58,7 @@ function gh() {
 function view() {
   if which xdg-open > /dev/null
   then
-    xdg-open $1
+    xdg-open "$1"
   fi
 }
 
