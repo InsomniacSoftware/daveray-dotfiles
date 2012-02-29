@@ -5,6 +5,9 @@ DOTFILES=$PWD
 echo -e "\nsource $DOTFILES/bashrc.sh\n" >> $TARGET/.bashrc
 ln -s $DOTFILES/inputrc.rc $TARGET/.inputrc
 
+# ack
+ln -s $DOTFILES/ackrc.rc $TARGET/.ackrc
+
 # tmux junk
 ln -s $DOTFILES/tmux.conf $TARGET/.tmux.conf
 
