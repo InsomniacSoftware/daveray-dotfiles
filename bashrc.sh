@@ -2,6 +2,12 @@ export PATH="$PATH:/usr/texbin/:$HOME/bin:$HOME/.dotfiles/bin"
 export HISTIGNORE="cd:ls:[bf]g:exit:pwd:clear:mount:git st*:hg st*:eclipse:history:gvim:vim"
 export HISTCONTROL=ignoreboth
 
+# keep saving history
+shopt -s histappend
+
+# read/write history http://briancarper.net/blog/248/
+alias uh='history -n; history -a'
+
 # Run gvim in terminal mode so we get nice colors
 alias vim="gvim -v"
 export EDITOR="gvim -v"
@@ -11,6 +17,9 @@ alias grep='grep -n --color=auto'
 
 # Tell tmux out term has color
 alias tmux="tmux -2"
+
+# Space will auto-expand history expressions
+bind Space:magic-space
 
 source $HOME/.dotfiles/git-completion.bash
 source $HOME/.dotfiles/hg-completion.bash
