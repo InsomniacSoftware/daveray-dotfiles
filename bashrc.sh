@@ -12,6 +12,9 @@ alias uh='history -n; history -a'
 alias vim="gvim -v"
 export EDITOR="gvim -v"
 
+# Set up perforce editor
+export P4EDITOR="gvim -v"
+
 # Nicer grep
 alias grep='grep -n --color=auto'
 
