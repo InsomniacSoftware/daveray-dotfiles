@@ -1,0 +1,2 @@
+#!/bin/sh
+find . -type f ! -name '*~' -print0| xargs -0 p4 -c dray_office_mac fstat 2>&1|awk '/no such file/{print $1}'

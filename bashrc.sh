@@ -15,6 +15,9 @@ export EDITOR="gvim -v"
 # Set up perforce editor
 export P4EDITOR="gvim -v"
 
+# Tell p4 to search up for .p4config to determine settings. Stupid.
+export P4CONFIG=".p4config"
+
 # Nicer grep
 alias grep='grep -n --color=auto'
 
