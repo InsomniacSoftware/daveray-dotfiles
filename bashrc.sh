@@ -19,7 +19,7 @@ export P4EDITOR="gvim -v"
 export P4CONFIG=".p4config"
 
 # Nicer grep
-alias grep='grep -n --color=auto'
+alias grep='grep --color=auto'
 
 # Tell tmux out term has color
 alias tmux="tmux -2"
