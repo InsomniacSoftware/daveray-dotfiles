@@ -18,6 +18,11 @@ export P4EDITOR="gvim -v"
 # Tell p4 to search up for .p4config to determine settings. Stupid.
 export P4CONFIG=".p4config"
 
+# alias to launch p4v app on osx
+if [ `uname` == "Darwin" ]; then
+  alias p4v="open -a p4v"
+fi
+
 # Nicer grep
 alias grep='grep --color=auto'
 
