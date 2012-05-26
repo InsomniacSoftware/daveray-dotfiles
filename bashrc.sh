@@ -35,6 +35,8 @@ bind Space:magic-space
 source $HOME/.dotfiles/git-completion.bash
 source $HOME/.dotfiles/hg-completion.bash
 source $HOME/.dotfiles/lein-completion.bash
+# https://raw.github.com/skybert/my-little-friends/master/bash_completion.d/p4
+source $HOME/.dotfiles/p4-completion.bash
 
 export GIT_PS1_SHOWDIRTYSTATE=true
 
