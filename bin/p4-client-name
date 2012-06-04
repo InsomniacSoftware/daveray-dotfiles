@@ -1,0 +1,3 @@
+#!/bin/sh
+
+p4 info | awk '/Client name: / {print $3}'

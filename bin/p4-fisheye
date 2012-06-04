@@ -1,0 +1,3 @@
+#!/bin/sh
+
+open http://fisheye.netflix.com/changelog/depot?cs=$1
