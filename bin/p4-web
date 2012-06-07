@@ -1,0 +1,9 @@
+#!/bin/sh
+# Given a local file, show it in fisheye
+DEPOT_SEARCH_ROOT="http://depotsearch/source/xref/perforce"
+FISHEYE_ROOT="http://fisheye/browse/depot"
+
+URL=`p4 fstat -T depotFile $1 | awk '{print $3}' | awk "{sub(\"//depot\",\"$FISHEYE_ROOT\"); print}"`
+
+echo "$URL?hb=true"
+open "$URL?hb=true"
