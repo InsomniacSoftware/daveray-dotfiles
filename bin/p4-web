@@ -3,7 +3,17 @@
 DEPOT_SEARCH_ROOT="http://depotsearch/source/xref/perforce"
 FISHEYE_ROOT="http://fisheye/browse/depot"
 
-URL=`p4 fstat -T depotFile $1 | awk '{print $3}' | awk "{sub(\"//depot\",\"$FISHEYE_ROOT\"); print}"`
 
-echo "$URL?hb=true"
-open "$URL?hb=true"
+if [ -f $1 ]
+then
+  # If it's a file, view the file in fisheye
+  URL=`p4 fstat -T depotFile $1 | awk '{print $3}' | awk "{sub(\"//depot\",\"$FISHEYE_ROOT\"); print}"`
+  URL="$URL?hb=true"
+else
+  # Otherwise, maybe its a changeset
+  URL="http://fisheye/changelog/depot?cs=$1"
+fi
+
+echo $URL
+open "$URL"
+
