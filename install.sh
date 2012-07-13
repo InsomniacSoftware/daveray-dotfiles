@@ -18,6 +18,10 @@ ln -s $DOTFILES/gitignore $TARGET/.gitignore
 # Hg junk
 echo -e "\n%include $DOTFILES/hgrc.ini\n" >> $TARGET/.hgrc
 
+# lein junk
+mkdir $TARGET/.lein
+ln -s $DOTFILES/lein/profiles.clj $TARGET/.lein/profiles.clj
+
 # Vim junk.
 git clone git@github.com:daveray/vimfiles.git $TARGET/.vim
 echo -e "runtime vimrc.vim\n" > $TARGET/.vimrc
