@@ -1,0 +1,4 @@
+#!/bin/sh
+java -jar ~/.dotfiles/bin/cljpp.jar $*
+
+# vim:ft=sh
