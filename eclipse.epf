@@ -1,4 +1,4 @@
-#Fri Jun 22 08:15:39 PDT 2012
+#Mon Jul 30 11:54:43 PDT 2012
 /instance/org.eclipse.jdt.core/org.eclipse.jdt.core.builder.resourceCopyExclusionFilter=
 /instance/org.eclipse.jdt.ui/sp_cleanup.make_variable_declarations_final=false
 /instance/org.eclipse.ui.ide/EXIT_PROMPT_ON_CLOSE_LAST_WINDOW=false
@@ -7,14 +7,16 @@
 /instance/org.eclipse.jdt.ui/sp_cleanup.use_blocks_only_for_return_and_throw=false
 /instance/org.eclipse.jdt.ui/org.eclipse.jdt.ui.text.custom_code_templates=<?xml version\="1.0" encoding\="UTF-8" standalone\="no"?><templates><template autoinsert\="false" context\="filecomment_context" deleted\="false" description\="Comment for created Java files" enabled\="true" id\="org.eclipse.jdt.ui.text.codetemplates.filecomment" name\="filecomment">/**\n * Copyright ${year} Netflix, Inc\n */</template></templates>
 /instance/org.eclipse.jdt.ui/formatter_profile=_Netflix
+@com.perforce.team.ui.text=2012.1.443465
 /instance/org.eclipse.jdt.ui/sp_cleanup.sort_members=false
 /instance/org.eclipse.ui.ide/platformState=1337743884971
 @org.eclipse.ui.ide=3.7.0.v20110928-1505
 @com.perforce.team.core=2012.1.443465
 @org.eclipse.jdt.core=3.7.3.v20120119-1537
 /instance/org.eclipse.wst.xml.core/endTagWithAttributes=2
-/instance/org.eclipse.jdt.ui/content_assist_favorite_static_members=java.lang.Math.*;org.mockito.Mockito.*;org.junit.Assert.*;com.google.common.collect.Maps.*;com.google.common.collect.Lists.*;com.google.common.collect.Sets.*;com.google.common.collect.Iterables.*;com.google.common.collect.Iterators.*;com.google.common.base.Strings.*;org.apache.commons.lang.StringUtils.*
+/instance/org.eclipse.jdt.ui/content_assist_favorite_static_members=java.lang.Math.*;org.mockito.Mockito.*;org.junit.Assert.*;com.google.common.collect.Maps.*;com.google.common.collect.Lists.*;com.google.common.collect.Sets.*;com.google.common.collect.Iterables.*;com.google.common.collect.Iterators.*;com.google.common.base.Strings.*;org.apache.commons.lang.StringUtils.*;com.google.common.base.Preconditions.*;java.lang.String.*
 @org.eclipse.wst.sse.core=1.1.602.v201112071516
+/instance/com.perforce.team.ui.text/com.perforce.team.ui.text.timelapse.SHOW_AUTHORS=true
 /instance/org.eclipse.wst.sse.ui/content_assist_number_of_computers=7
 /instance/org.eclipse.jdt.ui/org.eclipse.jdt.ui.javadoclocations.migrated=true
 @org.eclipse.wst.sse.ui=1.3.2.v201201041522
@@ -26,8 +28,9 @@
 /instance/org.eclipse.jdt.ui/sp_cleanup.always_use_this_for_non_static_field_access=false
 /instance/org.eclipse.jdt.core/org.eclipse.jdt.core.codeComplete.visibilityCheck=enabled
 /instance/org.eclipse.jdt.ui/hoverModifierMasks=org.eclipse.jdt.ui.BestMatchHover;0;org.eclipse.jdt.internal.debug.ui.JavaDebugHover;0;org.eclipse.jdt.ui.ProblemHover;0;org.eclipse.jdt.ui.NLSStringHover;4259840;org.eclipse.jdt.ui.JavadocHover;0;org.eclipse.jdt.ui.JavaSourceHover;131072;org.eclipse.jdt.ui.AnnotationHover;0;
+/instance/org.eclipse.ant.ui/useQuickDiffPrefPage=true
 /instance/org.eclipse.wst.xml.core/missingQuotes=2
-/instance/org.eclipse.debug.core/prefWatchExpressions=<?xml version\="1.0" encoding\="UTF-8" standalone\="no"?>\n<watchExpressions>\n<expression enabled\="true" text\="new String(sig)"/>\n</watchExpressions>\n
+/instance/org.eclipse.debug.core/prefWatchExpressions=<?xml version\="1.0" encoding\="UTF-8" standalone\="no"?>\n<watchExpressions>\n<expression enabled\="true" text\="new String(responseInBytes)"/>\n<expression enabled\="true" text\="e.printStackTrace()"/>\n</watchExpressions>\n
 @org.eclipse.team.ui=3.6.101.R37x_v20111109-0800
 /instance/org.eclipse.jdt.launching/org.eclipse.jdt.launching.PREF_VM_XML=<?xml version\="1.0" encoding\="UTF-8" standalone\="no"?>\n<vmSettings defaultVM\="52,org.eclipse.jdt.internal.launching.macosx.MacOSXType8,Contents" defaultVMConnector\="">\n<vmType id\="org.eclipse.jdt.internal.launching.macosx.MacOSXType">\n<vm id\="Contents" name\="Java SE 6 (MacOS X Default)" path\="/System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Home"/>\n</vmType>\n</vmSettings>\n
 /instance/org.eclipse.jdt.ui/markOccurrences=false
@@ -51,7 +54,7 @@
 /instance/org.eclipse.wst.xml.core/missingClosingQuote=2
 /instance/org.eclipse.ui.workbench/overridepresentation=true
 /instance/org.eclipse.ui.editors/overviewRuler_migration=migrated_3.1
-/instance/org.eclipse.jdt.ui/org.eclipse.jdt.ui.typefilter.enabled=antlr.collections.*;com.bea.*;com.beust.jcommander.internal.*;com.sun.corba.*;com.sun.j3d.*;com.sun.xml.bind.v2.*;com.sun.xml.internal.*;edu.emory.*;java.awt.List;org.omg.*;org.testng.collections.*;
+/instance/org.eclipse.jdt.ui/org.eclipse.jdt.ui.typefilter.enabled=antlr.collections.*;com.bea.*;com.beust.jcommander.internal.*;com.sun.corba.*;com.sun.j3d.*;com.sun.org.*;com.sun.tools.javac.*;com.sun.xml.bind.v2.*;com.sun.xml.internal.*;edu.emory.*;java.awt.List;org.aspectj.*;org.jboss.netty.util.internal.*;org.mockito.internal.*;org.omg.*;org.testng.collections.*;org.testng.internal.*;weblogic.*;
 /instance/com.perforce.team.core/com.perforce.team.core.p4java.P4_CONNECTIONS=P4PORT perforce\\c1666 P4CLIENT dray_social_setup P4USER dray P4CHARSET none SAVEPASS true OFFLINE false 
 /instance/org.eclipse.jdt.ui/sp_cleanup.make_parameters_final=false
 @org.eclipse.ui.workbench=3.7.1.v20120104-1859
@@ -62,6 +65,7 @@
 /instance/org.eclipse.jdt.ui/sp_cleanup.convert_to_enhanced_for_loop=false
 /instance/org.eclipse.jdt.ui/sp_cleanup.format_source_code_changes_only=false
 /instance/org.eclipse.jdt.ui/sp_cleanup.add_default_serial_version_id=true
+@org.eclipse.ant.ui=3.5.101.v20120110-1739
 /instance/org.eclipse.jdt.ui/sp_cleanup.add_missing_override_annotations=true
 /instance/org.eclipse.ui/showIntro=false
 /instance/org.eclipse.jdt.junit.core/org.eclipse.jdt.junit.enable_assertions=false
@@ -78,14 +82,14 @@
 /instance/org.eclipse.debug.ui/pref_state_memento.org.eclipse.debug.ui.VariableView=<?xml version\="1.0" encoding\="UTF-8"?>\n<VariablesViewMemento org.eclipse.debug.ui.SASH_DETAILS_PART\="315" org.eclipse.debug.ui.SASH_VIEW_PART\="684">\n<COLUMN_SIZES IMemento.internal.id\="org.eclipse.debug.ui.VARIALBE_COLUMN_PRESENTATION.COL_VAR_NAME" SIZE\="185"/>\n<COLUMN_SIZES IMemento.internal.id\="org.eclipse.debug.ui.VARIALBE_COLUMN_PRESENTATION.COL_VAR_VALUE" SIZE\="337"/>\n<PRESENTATION_CONTEXT_PROPERTIES IMemento.internal.id\="org.eclipse.debug.ui.VariableView"/>\n</VariablesViewMemento>
 /instance/org.eclipse.search/org.eclipse.search.reuseEditor=false
 /instance/org.eclipse.wst.xml.core/missingEndTag=2
-/instance/org.eclipse.debug.ui/preferredDetailPanes=DefaultDetailPane\:DefaultDetailPane|org.eclipse.jdt.debug.ui.DETAIL_PANE_LINE_BREAKPOINT\:org.eclipse.jdt.debug.ui.DETAIL_PANE_LINE_BREAKPOINT|
+/instance/org.eclipse.debug.ui/preferredDetailPanes=DefaultDetailPane\:DefaultDetailPane|org.eclipse.jdt.debug.ui.DETAIL_PANE_LINE_BREAKPOINT\:org.eclipse.jdt.debug.ui.DETAIL_PANE_LINE_BREAKPOINT|org.eclipse.jdt.debug.ui.DETAIL_PANE_EXCEPTION_BREAKPOINT\:org.eclipse.jdt.debug.ui.DETAIL_PANE_EXCEPTION_BREAKPOINT|
 /configuration/org.eclipse.core.net/org.eclipse.core.net.hasMigrated=true
 /instance/org.eclipse.jdt.ui/sourceHoverBackgroundColor=250,251,197
 /instance/org.eclipse.jdt.ui/useQuickDiffPrefPage=true
 /instance/org.eclipse.jdt.ui/content_assist_proposals_foreground=0,0,0
 /instance/org.eclipse.wst.jsdt.ui/fontPropagated=true
 /instance/org.eclipse.jdt.ui/sp_cleanup.use_this_for_non_static_field_access_only_if_necessary=true
-/instance/com.perforce.team.ui/com.perforce.team.ui.historycolumns=Revision\=100\#\#\#File Name\=100\#\#\#Changelist\=100\#\#\#Date\=100\#\#\#User\=100\#\#\#Action\=100\#\#\#Description\=100\#\#\#
+/instance/com.perforce.team.ui/com.perforce.team.ui.historycolumns=Revision\=100\#\#\#File Name\=100\#\#\#Changelist\=100\#\#\#Date\=199\#\#\#User\=100\#\#\#Action\=100\#\#\#Description\=262\#\#\#
 /instance/org.eclipse.jdt.ui/sp_cleanup.remove_unused_private_types=true
 /instance/org.eclipse.jdt.ui/sp_cleanup.make_local_variable_final=false
 /instance/org.eclipse.jdt.core/org.eclipse.jdt.core.compiler.problem.assertIdentifier=error
@@ -96,7 +100,6 @@
 @org.eclipse.jdt.debug.ui=3.6.1.v20111006_r372
 /instance/org.eclipse.jdt.ui/useAnnotationsPrefPage=true
 /instance/org.eclipse.ui.ide/PROBLEMS_FILTERS_MIGRATE=true
-/configuration/org.eclipse.ui.ide/RECENT_WORKSPACES=/Users/dray/netflix/ws/social\n/Users/dray/netflix/ws
 /instance/org.eclipse.jdt.ui/org.eclipse.jdt.ui.formatterprofiles.version=12
 /instance/org.eclipse.jdt.ui/sp_cleanup.use_blocks=false
 /instance/org.eclipse.wst.sse.ui/useQuickDiffPrefPage=true
@@ -108,10 +111,11 @@
 file_export_version=3.0
 /instance/org.eclipse.wst.xml.core/missingClosingBracket=2
 /instance/org.eclipse.jdt.ui/sp_cleanup.remove_unnecessary_casts=false
-/instance/org.eclipse.ui.ide/org.eclipse.ui.internal.views.markers.CachedMarkerBuilderorg.eclipse.ui.views.ProblemView=<?xml version\="1.0" encoding\="UTF-8"?>\n<filterGroups andFilters\="false" markerLimit\="100" markerLimitEnabled\="true">\n<filterGroup IMemento.internal.id\="All Errors" enabled\="false" filterLimit\="-1" scope\="0" workingSet\="Aggregate for window 1338211913814">\n<fieldFilter IMemento.internal.id\="org.eclipse.ui.ide.severityAndDescriptionField" containsModifier\="CONTAINS" containsText\="" selectedSeverities\="4"/>\n<fieldFilter IMemento.internal.id\="org.eclipse.ui.ide.markerType"/>\n</filterGroup>\n<filterGroup IMemento.internal.id\="Warnings on Selection" enabled\="false" filterLimit\="-1" scope\="2" workingSet\="Aggregate for window 1338211913814">\n<fieldFilter IMemento.internal.id\="org.eclipse.ui.ide.severityAndDescriptionField" containsModifier\="CONTAINS" containsText\="" selectedSeverities\="2"/>\n<fieldFilter IMemento.internal.id\="org.eclipse.ui.ide.markerType"/>\n</filterGroup>\n<filterGroup IMemento.internal.id\="Errors/Warnings on Selection" enabled\="false" filterLimit\="-1" scope\="2" workingSet\="Aggregate for window 1338211913814">\n<fieldFilter IMemento.internal.id\="org.eclipse.ui.ide.severityAndDescriptionField" containsModifier\="CONTAINS" containsText\="" selectedSeverities\="6"/>\n<fieldFilter IMemento.internal.id\="org.eclipse.ui.ide.markerType"/>\n</filterGroup>\n<filterGroup IMemento.internal.id\="Errors/Warnings on Project" enabled\="false" filterLimit\="-1" scope\="3" workingSet\="Aggregate for window 1338211913814">\n<fieldFilter IMemento.internal.id\="org.eclipse.ui.ide.severityAndDescriptionField" containsModifier\="CONTAINS" containsText\="" selectedSeverities\="6"/>\n<fieldFilter IMemento.internal.id\="org.eclipse.ui.ide.markerType" selectedTypes\="org.eclipse.pde.api.tools.marker.sincetags\:org.eclipse.pde.api.tools.api_usage\:org.eclipse.pde.api.tools.marker.apiusescan\:org.eclipse.pde.api.tools.compatibility\:org.eclipse.pde.api.tools.api_profile\:org.eclipse.pde.api.tools.fatal_problem\:org.eclipse.pde.api.tools.api_component_resolution\:org.eclipse.pde.api.tools.unsupported_tags\:org.eclipse.pde.api.tools.unused_filters\:org.eclipse.pde.api.tools.version_numbering\:org.eclipse.jdt.apt.core.buildproblem\:org.eclipse.jdt.apt.core.configproblem\:org.eclipse.jdt.apt.core.compile.problem\:org.eclipse.jdt.apt.pluggable.core.compileProblem\:org.eclipse.jdt.apt.core.nonreconcile.compile.problem\:org.eclipse.ant.ui.buildFileProblem\:org.eclipse.jst.j2ee.ClasspathDependencyValidatorMarker\:org.eclipse.pde.ds.core.problem\:org.eclipse.datatools.connectivity.ui.driverProblem\:org.eclipse.jst.jee.ejb3.nobeans\:org.eclipse.jst.j2ee.ejb.EJBValidatorMarker\:org.eclipse.emf.ecore.diagnostic\:org.eclipse.jst.j2ee.EARValidatorMarker\:org.eclipse.wst.common.project.facet.core.validation.marker\:org.eclipse.jst.common.project.facet.core.javaVersionMismatch\:org.eclipse.jst.j2ee.differentRuntimesDetected\:org.eclipse.wst.html.core.validationMarker\:org.apache.ivyde.eclipse.marker\:org.eclipse.jdt.core.buildpath_problem\:org.eclipse.jdt.launching.jreContainerMarker\:org.eclipse.jdt.core.problem\:org.eclipse.wst.jsdt.core.buildpath_problem\:org.eclipse.wst.jsdt.web.core.problem\:org.eclipse.wst.jsdt.core.problem\:com.perforce.team.core.perforceadd\:org.eclipse.pde.core.problem\:org.eclipse.core.resources.problemmarker\:org.eclipse.datatools.connectivity.ui.profileFailure\:org.eclipse.wst.validation.problemmarker\:org.eclipse.wst.validation.problemmarker2\:org.eclipse.wst.wsdl.validation.validationMarker\:org.eclipse.jst.j2ee.ejb.annotations.xdoclet.xdoclet.marker\:org.eclipse.wst.xml.core.validationMarker\:"/>\n</filterGroup>\n</filterGroups>
+/instance/org.eclipse.ui.ide/org.eclipse.ui.internal.views.markers.CachedMarkerBuilderorg.eclipse.ui.views.ProblemView=<?xml version\="1.0" encoding\="UTF-8"?>\n<filterGroups andFilters\="false" markerLimit\="100" markerLimitEnabled\="false">\n<filterGroup IMemento.internal.id\="All Errors" enabled\="false" filterLimit\="-1" scope\="0" workingSet\="Aggregate for window 1338211913814">\n<fieldFilter IMemento.internal.id\="org.eclipse.ui.ide.severityAndDescriptionField" containsModifier\="CONTAINS" containsText\="" selectedSeverities\="4"/>\n<fieldFilter IMemento.internal.id\="org.eclipse.ui.ide.markerType"/>\n</filterGroup>\n<filterGroup IMemento.internal.id\="Warnings on Selection" enabled\="false" filterLimit\="-1" scope\="2" workingSet\="Aggregate for window 1338211913814">\n<fieldFilter IMemento.internal.id\="org.eclipse.ui.ide.severityAndDescriptionField" containsModifier\="CONTAINS" containsText\="" selectedSeverities\="2"/>\n<fieldFilter IMemento.internal.id\="org.eclipse.ui.ide.markerType"/>\n</filterGroup>\n<filterGroup IMemento.internal.id\="Errors/Warnings on Selection" enabled\="false" filterLimit\="-1" scope\="2" workingSet\="Aggregate for window 1338211913814">\n<fieldFilter IMemento.internal.id\="org.eclipse.ui.ide.severityAndDescriptionField" containsModifier\="CONTAINS" containsText\="" selectedSeverities\="6"/>\n<fieldFilter IMemento.internal.id\="org.eclipse.ui.ide.markerType"/>\n</filterGroup>\n<filterGroup IMemento.internal.id\="Errors/Warnings on Project" enabled\="false" filterLimit\="-1" scope\="3" workingSet\="Aggregate for window 1338211913814">\n<fieldFilter IMemento.internal.id\="org.eclipse.ui.ide.severityAndDescriptionField" containsModifier\="CONTAINS" containsText\="" selectedSeverities\="6"/>\n<fieldFilter IMemento.internal.id\="org.eclipse.ui.ide.markerType" selectedTypes\="org.eclipse.pde.api.tools.marker.sincetags\:org.eclipse.pde.api.tools.api_usage\:org.eclipse.pde.api.tools.marker.apiusescan\:org.eclipse.pde.api.tools.compatibility\:org.eclipse.pde.api.tools.api_profile\:org.eclipse.pde.api.tools.fatal_problem\:org.eclipse.pde.api.tools.api_component_resolution\:org.eclipse.pde.api.tools.unsupported_tags\:org.eclipse.pde.api.tools.unused_filters\:org.eclipse.pde.api.tools.version_numbering\:org.eclipse.jdt.apt.core.buildproblem\:org.eclipse.jdt.apt.core.configproblem\:org.eclipse.jdt.apt.core.compile.problem\:org.eclipse.jdt.apt.pluggable.core.compileProblem\:org.eclipse.jdt.apt.core.nonreconcile.compile.problem\:org.eclipse.ant.ui.buildFileProblem\:org.eclipse.jst.j2ee.ClasspathDependencyValidatorMarker\:org.eclipse.pde.ds.core.problem\:org.eclipse.datatools.connectivity.ui.driverProblem\:org.eclipse.jst.jee.ejb3.nobeans\:org.eclipse.jst.j2ee.ejb.EJBValidatorMarker\:org.eclipse.emf.ecore.diagnostic\:org.eclipse.jst.j2ee.EARValidatorMarker\:org.eclipse.wst.common.project.facet.core.validation.marker\:org.eclipse.jst.common.project.facet.core.javaVersionMismatch\:org.eclipse.jst.j2ee.differentRuntimesDetected\:org.eclipse.wst.html.core.validationMarker\:org.apache.ivyde.eclipse.marker\:org.eclipse.jdt.core.buildpath_problem\:org.eclipse.jdt.launching.jreContainerMarker\:org.eclipse.jdt.core.problem\:org.eclipse.wst.jsdt.core.buildpath_problem\:org.eclipse.wst.jsdt.web.core.problem\:org.eclipse.wst.jsdt.core.problem\:com.perforce.team.core.perforceadd\:org.eclipse.pde.core.problem\:org.eclipse.core.resources.problemmarker\:org.eclipse.datatools.connectivity.ui.profileFailure\:org.eclipse.wst.validation.problemmarker\:org.eclipse.wst.validation.problemmarker2\:org.eclipse.wst.wsdl.validation.validationMarker\:org.eclipse.jst.j2ee.ejb.annotations.xdoclet.xdoclet.marker\:org.eclipse.wst.xml.core.validationMarker\:"/>\n</filterGroup>\n</filterGroups>
 /instance/org.eclipse.jdt.ui/sp_cleanup.qualify_static_member_accesses_through_instances_with_declaring_class=true
 /configuration/org.eclipse.ui.ide/MAX_RECENT_WORKSPACES=5
 /instance/org.eclipse.jdt.core/org.eclipse.jdt.core.formatter.tabulation.char=space
+/instance/org.eclipse.ant.ui/useAnnotationsPrefPage=true
 @org.eclipse.wst.xml.core=1.1.602.v201201091944
 /instance/org.eclipse.ui.editors/printMargin=true
 /instance/org.eclipse.jdt.ui/spelling_locale_initialized=true
@@ -137,7 +141,6 @@ file_export_version=3.0
 /instance/org.eclipse.jdt.ui/formatter_settings_version=12
 /instance/org.eclipse.search/org.eclipse.search.defaultPerspective=org.eclipse.search.defaultPerspective.none
 @org.eclipse.wst.jsdt.ui=1.1.102.v201201131900
-@org.eclipse.core.net=1.2.100.I20110511-0800
 /instance/org.eclipse.core.resources/version=1
 /instance/org.eclipse.wst.jsdt.ui/tabWidthPropagated=true
 /instance/org.eclipse.jdt.ui/sp_cleanup.add_missing_methods=false
@@ -158,7 +161,7 @@ file_export_version=3.0
 /instance/org.eclipse.jdt.ui/sp_cleanup.qualify_static_field_accesses_with_declaring_class=false
 /instance/org.eclipse.wst.xml.core/missingStartTag=2
 @org.eclipse.jdt.launching=3.6.1.v20111006_r372
-/instance/com.perforce.team.ui/com.perforce.team.ui.preferences.CHANGELIST_DESCRIPTIONS=SOCIAL-176. Decrypt facebook app access token and secret from cryptex rather than in code.\nReviewed in CR-SOCIAL-61.\n\#\#\#SOCIAL-176. Decrypt facebook app access token and secret from cryptex rather than in code.\#\#\#Initialize platform test harness with some convenient default properties. Added convenience method to change a fast property from test harness.\#\#\#Forgot to add this file with previous changelist.\#\#\#socialwebhooks now depends on socialservice-common for FacebookUtils.\#\#\#Added counters for signature validation failures.\#\#\#SOCIAL-218 redux. Using Manhattan event framework for event construction and posting.\#\#\#Configure components through PlatformTestHarness.\#\#\#Post-code-review (CR-SOCIAL-48) cleanup on Social Event Producers, SOCIAL-218. Use Video rather than longs in social events.\#\#\#Post-code-review (CR-SOCIAL-48) cleanup on Social Event Producers, SOCIAL-218. Use Visitor for friends in social events.\#\#\#
+/instance/com.perforce.team.ui/com.perforce.team.ui.preferences.CHANGELIST_DESCRIPTIONS=Catch and retry facebook deserialization failures.\#\#\#Improved exceptions when facebook response parse fails.\#\#\#Better logging with facebook response isn't parseable.\#\#\#Inverted blank test caused NPE in VisitorServiceImpl.getShareScope(). Fix tested locally.\#\#\#migrateFromSubscriber failed with NPE if visitor wasn't in cassandra already. Fixed and tested locally failing example from refresh test.\#\#\#Make disconnect resilient. Post a retry task on failure and handle it later. Use a sentinel (connect date) to avoid race conditions with reconnect.\#\#\#Fix astyanax keyspace setup in tests.\#\#\#Bringing some sanity to the singletons. Replaced VisitorService and FacebookService with new-style singletons.\#\#\#Support for posting to queues through test hook interface.\#\#\#Added a source to SQS events and included it in MDC.\#\#\#
 /instance/org.eclipse.jdt.ui/sp_cleanup.always_use_blocks=true
 /instance/org.eclipse.jdt.debug.ui/org.eclipse.debug.ui.VariableView.org.eclipse.jdt.debug.ui.show_null_entries=true
 /instance/org.eclipse.jdt.core/org.eclipse.jdt.core.classpathVariable.JRE_SRCROOT=
@@ -168,7 +171,6 @@ file_export_version=3.0
 /instance/org.eclipse.wst.xml.core/honourAllSchemaLocations=true
 /instance/org.eclipse.jdt.ui/sp_cleanup.use_parentheses_in_expressions=false
 /instance/org.eclipse.wst.xml.core/indicateNoGrammar=-1
-/instance/org.eclipse.jst.server.tomcat.core/locationorg.eclipse.jst.server.tomcat.runtime.60=/Users/dray/netflix/p4ws/dray_social_setup/Tomcat6.0.10
 /instance/org.eclipse.jdt.ui/sp_cleanup.qualify_static_method_accesses_with_declaring_class=false
 /instance/org.eclipse.wst.xml.core/xinclude=true
 /instance/org.eclipse.wst.xml.core/markupValidation=false
@@ -188,15 +190,14 @@ file_export_version=3.0
 /instance/org.eclipse.ui.workbench/ENABLED_DECORATORS=com.perforce.team.ui.decorator.PerforceDecorator\:true,org.eclipse.wst.server.ui.decorator\:false,org.eclipse.datatools.connectivity.ui.decorator.contentextension\:false,org.eclipse.jdt.ui.override.decorator\:true,org.eclipse.jdt.ui.interface.decorator\:false,org.eclipse.jdt.ui.buildpath.decorator\:true,org.eclipse.jst.j2ee.internal.ui.util.AnnotationIconDecorator_ejb\:true,org.eclipse.jst.j2ee.navigator.internal.J2EEProjectDecorator\:true,org.eclipse.jst.jee.ui.internal.navigator.ejb.BeanDecorator\:true,org.eclipse.jst.jee.navigator.internal.JEEProjectDecorator\:true,org.eclipse.jst.j2ee.internal.ui.util.AnnotationIconDecorator_servlet\:true,org.eclipse.jst.servlet.ui.Decorator\:true,org.eclipse.pde.ui.binaryProjectDecorator\:false,org.eclipse.team.cvs.ui.decorator\:false,org.eclipse.ui.LinkedResourceDecorator\:true,org.eclipse.ui.VirtualResourceDecorator\:true,org.eclipse.ui.ContentTypeDecorator\:true,org.eclipse.ui.ResourceFilterDecorator\:false,org.eclipse.wst.jsdt.ui.override.decorator\:true,org.eclipse.wst.server.ui.navigatorDecorator\:true,
 /instance/org.eclipse.wst.jsdt.ui/useQuickDiffPrefPage=true
 /instance/org.eclipse.ui.editors/showWhitespaceCharacters=true
+/instance/org.eclipse.ui.ide/TASKS_FILTERS_MIGRATE=true
 /instance/org.eclipse.jdt.ui/sp_cleanup.organize_imports=false
 @org.eclipse.jst.server.tomcat.core=1.1.301.v20111010_1242
-/instance/org.eclipse.core.net/org.eclipse.core.net.hasMigrated=true
 /instance/org.eclipse.wst.xml.core/attributeHasNoValue=2
 /instance/org.eclipse.jdt.ui/sp_cleanup.add_missing_override_annotations_interface_methods=true
 /instance/org.eclipse.debug.ui/Console.highWaterMark=88000
 /instance/org.eclipse.jdt.core/org.eclipse.jdt.core.compiler.codegen.inlineJsrBytecode=enabled
 /instance/org.eclipse.wst.xml.core/indiciateNoDocumentElement=-1
-/instance/org.eclipse.wst.server.core/runtimes=<?xml version\="1.0" encoding\="UTF-8" standalone\="no"?>\n<runtimes>\n  <runtime id\="Apache Tomcat v6.0" location\="/Users/dray/netflix/p4ws/dray_social_setup/Tomcat6.0.10" name\="Apache Tomcat v6.0" runtime-type-id\="org.eclipse.jst.server.tomcat.runtime.60" timestamp\="0"/>\n</runtimes>\n
 /instance/org.eclipse.jdt.ui/editor_save_participant_org.eclipse.jdt.ui.postsavelistener.cleanup=true
 /instance/org.eclipse.jdt.core/org.eclipse.jdt.core.compiler.codegen.targetPlatform=1.6
 /instance/org.eclipse.jdt.ui/sp_cleanup.remove_trailing_whitespaces=true
