@@ -1,0 +1,38 @@
+#!/bin/sh
+# Yes, this should be a lein plugin
+# given com.foo.core creates:
+#    src/main/resources/com/foo/core.clj
+#    src/test/resources/com/foo/test_core.clj
+# with appropriate contents
+
+NS=$1
+VALID_NS=${NS//-/_}
+
+TEST_NS=`echo $NS | sed 's/\(.*\)\.\([^.]*\)$/\1.test-\2/'`
+VALID_TEST_NS=${TEST_NS//-/_}
+
+LANG_DIR="resources"
+
+SRC_FILE=${VALID_NS//./\/}
+SRC_FILE="src/main/${LANG_DIR}/${SRC_FILE}.clj"
+SRC_DIR=$(dirname $SRC_FILE)
+SRC_CONTENT="(ns $NS)"
+
+TEST_FILE=${VALID_TEST_NS//./\/}
+TEST_FILE="src/test/${LANG_DIR}/${TEST_FILE}.clj"
+TEST_DIR=$(dirname $TEST_FILE)
+NS_ALIAS=${NS##*.}
+TEST_CONTENT="(ns $TEST_NS\n  (:use $NS)\n  (:require [clojure.test :refer [deftest testing is]]))\n"
+
+echo "Making $SRC_FILE"
+mkdir -p $SRC_DIR
+echo $SRC_CONTENT > $SRC_FILE
+
+echo "Making $TEST_FILE"
+mkdir -p $TEST_DIR
+
+IFS='%'
+echo $TEST_CONTENT > $TEST_FILE
+unset IFS
+
+# vim:ft=sh
