@@ -1,0 +1,4 @@
+#!/bin/sh
+# Can also do ctrl-backslash if you're in the same console
+
+kill -QUIT $1
