@@ -1,0 +1,3 @@
+#!/bin/sh
+curl -sS https://graph.facebook.com/$1 | jsonpp
+# vim:ft=sh
