@@ -1,0 +1,3 @@
+#!/bin/sh
+(head -5;tail -5)
+# vim:ft=sh
