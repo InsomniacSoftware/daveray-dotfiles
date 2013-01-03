@@ -11,7 +11,7 @@ VALID_NS=${NS//-/_}
 TEST_NS=`echo $NS | sed 's/\(.*\)\.\([^.]*\)$/\1.test-\2/'`
 VALID_TEST_NS=${TEST_NS//-/_}
 
-LANG_DIR="resources"
+LANG_DIR="clojure"
 
 SRC_FILE=${VALID_NS//./\/}
 SRC_FILE="src/main/${LANG_DIR}/${SRC_FILE}.clj"
