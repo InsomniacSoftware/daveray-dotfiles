@@ -1,8 +1,11 @@
 #!/bin/sh
 # Yes, this should be a lein plugin
-# given com.foo.core creates:
-#    src/main/resources/com/foo/core.clj
-#    src/test/resources/com/foo/test_core.clj
+# new-ns-mvn com.foo.core, creates:
+#    src/main/clojure/com/foo/core.clj
+#    src/test/clojure/com/foo/test_core.clj
+# new-ns-mvn com.foo.core clj, creates:
+#    src/main/clj/com/foo/core.clj
+#    src/test/clj/com/foo/test_core.clj
 # with appropriate contents
 
 NS=$1
@@ -11,7 +14,7 @@ VALID_NS=${NS//-/_}
 TEST_NS=`echo $NS | sed 's/\(.*\)\.\([^.]*\)$/\1.test-\2/'`
 VALID_TEST_NS=${TEST_NS//-/_}
 
-LANG_DIR="clojure"
+LANG_DIR=${2:-clojure}
 
 SRC_FILE=${VALID_NS//./\/}
 SRC_FILE="src/main/${LANG_DIR}/${SRC_FILE}.clj"
@@ -24,11 +27,11 @@ TEST_DIR=$(dirname $TEST_FILE)
 NS_ALIAS=${NS##*.}
 TEST_CONTENT="(ns $TEST_NS\n  (:use $NS)\n  (:require [clojure.test :refer [deftest testing is]]))\n"
 
-echo "Making $SRC_FILE"
+echo "$SRC_FILE"
 mkdir -p $SRC_DIR
 echo $SRC_CONTENT > $SRC_FILE
 
-echo "Making $TEST_FILE"
+echo "$TEST_FILE"
 mkdir -p $TEST_DIR
 
 IFS='%'
