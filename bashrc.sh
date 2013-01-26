@@ -1,6 +1,7 @@
 export PATH="/usr/local/bin:$PATH:/usr/texbin:$HOME/bin:$HOME/.dotfiles/bin"
 export HISTIGNORE="cd:ls:[bf]g:exit:pwd:clear:mount:git st*:hg st*:eclipse:history:gvim:vim"
 export HISTCONTROL=ignoreboth
+export HISTSIZE=10000
 
 # keep saving history
 shopt -s histappend
