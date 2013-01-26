@@ -1,0 +1,29 @@
+#!/bin/bash
+# some shortcuts for places
+echo $@
+case "$1" in
+  jira)
+    url=http://jira/browse/$2
+    ;;
+  se[pt])
+    url=http://go/socialexplorer$([ "$1" == "set" ] && echo "test" || echo "")/$([ "$2" == "" ] && echo "" || echo "users/$2")
+    ;;
+  n[pt])
+    url=http://nac$([ "$1" == "np" ] && echo "prod" || echo "test")/$([ "$3" == "" ] && echo "us-east-1" || echo "$3")/cluster/show/$2
+    ;;
+  go)
+    url=http://go/$2
+    ;;
+  ds)
+    shift
+    all=$@
+    url=http://depotsearch/source/search?project=perforce\&project=github\&project=internal-github\&project=stash\&q=${all// /%20}
+    ;;
+  *)
+    all=$*
+    url=http://google.com/search?q=${all// /%20}
+esac
+
+echo $url
+open $url
+
