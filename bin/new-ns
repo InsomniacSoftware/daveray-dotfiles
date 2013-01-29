@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 # Yes, this should be a lein plugin
 
 NS=$1

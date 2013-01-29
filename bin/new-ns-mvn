@@ -1,17 +1,17 @@
-#!/bin/sh
+#!/bin/bash
 # Yes, this should be a lein plugin
 # new-ns-mvn com.foo.core, creates:
 #    src/main/clojure/com/foo/core.clj
-#    src/test/clojure/com/foo/test_core.clj
+#    src/test/clojure/com/foo/core_test.clj
 # new-ns-mvn com.foo.core clj, creates:
 #    src/main/clj/com/foo/core.clj
-#    src/test/clj/com/foo/test_core.clj
+#    src/test/clj/com/foo/core_test.clj
 # with appropriate contents
 
 NS=$1
 VALID_NS=${NS//-/_}
 
-TEST_NS=`echo $NS | sed 's/\(.*\)\.\([^.]*\)$/\1.test-\2/'`
+TEST_NS=`echo $NS | sed 's/\(.*\)\.\([^.]*\)$/\1.\2-test/'`
 VALID_TEST_NS=${TEST_NS//-/_}
 
 LANG_DIR=${2:-clojure}
