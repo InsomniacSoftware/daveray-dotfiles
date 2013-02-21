@@ -10,7 +10,7 @@ VALID_TEST_NS=${TEST_NS//-/_}
 SRC_FILE=${VALID_NS//./\/}
 SRC_FILE="src/${SRC_FILE}.clj"
 SRC_DIR=$(dirname $SRC_FILE)
-SRC_CONTENT="(ns $NS)"
+SRC_CONTENT="(ns $NS)\n\n(def ^:private -ns- *ns*)"
 
 TEST_FILE=${VALID_TEST_NS//./\/}
 TEST_FILE="test/${TEST_FILE}.clj"
@@ -19,12 +19,12 @@ NS_ALIAS=${NS##*.}
 TEST_CONTENT="(ns $TEST_NS\n  (:require [$NS :as $NS_ALIAS]\n            [clojure.test :refer [deftest testing is]]))\n\n#_(clojure.test/run-tests)\n"
 
 mkdir -p $SRC_DIR
-echo $SRC_CONTENT > $SRC_FILE
+echo -e $SRC_CONTENT > $SRC_FILE
 
 mkdir -p $TEST_DIR
 
 IFS='%'
-echo $TEST_CONTENT > $TEST_FILE
+echo -e $TEST_CONTENT > $TEST_FILE
 unset IFS
 
 # vim:ft=sh
