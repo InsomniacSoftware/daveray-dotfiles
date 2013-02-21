@@ -1,6 +1,18 @@
 #!/bin/sh
 
-gvim $* &
-lein repl
+NREPL_PORT=9999 #`unused-port`
+gvim -c "let nreplPort=\"$NREPL_PORT\"" $* &
 
+if [ -f project.clj ]; then
+  lein repl
+elif [ -f build.gradle ]; then
+  GRADLEW=`upfind -name gradlew`
+  if [ -n $g ]; then
+    $GRADLEW nrepl -PnreplPort=$NREPL_PORT
+  else
+    echo "Didn't fine gradlew"
+  fi
+else
+  echo "I'm at a loss"
+fi
 # vim:ft=sh
