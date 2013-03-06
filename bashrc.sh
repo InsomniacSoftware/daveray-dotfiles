@@ -3,6 +3,9 @@ export HISTIGNORE="cd:ls:[bf]g:exit:pwd:clear:mount:git st*:hg st*:eclipse:histo
 export HISTCONTROL=ignoreboth
 export HISTSIZE=10000
 
+# Make sure ctrl-d (useful in readline) doesn't cause the shell to exit
+export IGNOREEOF=50
+
 # keep saving history
 shopt -s histappend
 
