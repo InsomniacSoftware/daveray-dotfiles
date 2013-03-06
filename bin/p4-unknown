@@ -1,2 +1,2 @@
 #!/bin/sh
-find . -type f ! -name '*~' -print0 | xargs -0 p4 fstat 2>&1|awk '/no such file/{print $1}' | grep -v '/.ivy2.cache/' | grep -v '/build/classes/' | grep -v '/bin/' | grep -v '/target/' | grep -v '/dist/'
+find . -type f ! -name '*~' -print0 | xargs -0 p4 fstat 2>&1|awk '/no such file/{print $1}' | grep -v '/.ivy2.cache/' | grep -v '/build/classes/' | grep -v '/bin/' | grep -v '/target/' | grep -v '/dist/' | grep -v '\.swp$'
