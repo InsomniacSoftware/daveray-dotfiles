@@ -5,11 +5,18 @@ if [ -f project.clj ]; then
   gvim $* &
   lein repl
 elif [ -f build.gradle ]; then
+  # First look in parent directories
   if [ -z $GRADLEW ]; then
     GRADLEW=`upfind -name gradlew`
   fi
 
+  # Next look on path
+  if [ -z $GRADLEW ]; then
+    GRADLEW=`which gradlew`
+  fi
+
   if [ -n $GRADLEW ]; then
+    echo "gradlew $GRADLEW"
     NREPL_PORT=9999 #`unused-port`
     gvim -c "let nreplPort=\"$NREPL_PORT\"" $* &
     $GRADLEW nrepl -PnreplPort=$NREPL_PORT
