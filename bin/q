@@ -11,6 +11,9 @@ case "$1" in
   n[pt])
     url=http://nac$([ "$1" == "np" ] && echo "prod" || echo "test")/$([ "$3" == "" ] && echo "us-east-1" || echo "$3")/cluster/show/$2
     ;;
+  [pt]repl)
+    url=http://$([ "$3" == "" ] && echo "us-east-1" || echo "$3").discovery$([ "$1" == "prepl" ] && echo "prod" || echo "test").netflix.net:7001/discovery/resolver/$2/repl/
+    ;;
   go)
     url=http://go/$2
     ;;
