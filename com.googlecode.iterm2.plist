@@ -229,10 +229,21 @@
 	<array/>
 	<key>NSTableView Sort Ordering KeyBingingTable</key>
 	<array/>
+	<key>NSToolbar Configuration Terminal Toolbar</key>
+	<dict>
+		<key>TB Display Mode</key>
+		<integer>1</integer>
+		<key>TB Icon Size Mode</key>
+		<integer>1</integer>
+		<key>TB Is Shown</key>
+		<integer>0</integer>
+		<key>TB Size Mode</key>
+		<integer>1</integer>
+	</dict>
 	<key>NSWindow Frame Preferences</key>
 	<string>124 321 924 485 0 0 1680 1028 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>840 26 840 1002 0 0 1680 1028 </string>
+	<string>840 4 840 1024 0 0 1680 1028 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
 	<string>840 16 834 1012 0 0 1680 1028 </string>
 	<key>NSWindow Frame iTerm Window 2</key>
@@ -1023,7 +1034,7 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2013-03-26T05:36:40Z</date>
+	<date>2013-04-23T20:21:48Z</date>
 	<key>SavePasteHistory</key>
 	<false/>
 	<key>ShowBookmarkName</key>

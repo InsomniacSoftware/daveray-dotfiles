@@ -4,8 +4,10 @@ find . -type f ! -name '*~' -print0 | \
   awk '/no such file/{print $1}' | \
   grep -v '/.ivy2.cache/' | \
   grep -v '/build/classes/' | \
+  grep -v '/classes/' | \
   grep -v '/bin/' | \
   grep -v '/target/' | \
   grep -v '/dist/' | \
+  grep -v '\.class$' | \
   grep -v '\.sw[op]$'
 

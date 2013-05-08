@@ -16,9 +16,9 @@ elif [ -f build.gradle ]; then
   fi
 
   if [ -n $GRADLEW ]; then
-    echo "gradlew $GRADLEW"
     NREPL_PORT=9999 #`unused-port`
     gvim -c "let nreplPort=\"$NREPL_PORT\"" $* &
+    echo "executing: $GRADLEW nrepl -PnreplPort=$NREPL_PORT"
     $GRADLEW nrepl -PnreplPort=$NREPL_PORT
   else
     echo "Didn't fine gradlew"

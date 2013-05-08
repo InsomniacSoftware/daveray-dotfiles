@@ -1,0 +1,5 @@
+#!/bin/sh
+
+# eureka test service
+# eureka prod service
+curl -s -i http://discovery.cloud$([ "$1" == "test" ] && echo "qa" || echo "").netflix.net:7001/discovery/resolver/${2}/ | perl -n -e '/^Location: (.+)\// && print $1'
