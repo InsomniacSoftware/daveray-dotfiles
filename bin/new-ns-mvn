@@ -19,7 +19,7 @@ LANG_DIR=${2:-clojure}
 SRC_FILE=${VALID_NS//./\/}
 SRC_FILE="src/main/${LANG_DIR}/${SRC_FILE}.clj"
 SRC_DIR=$(dirname $SRC_FILE)
-SRC_CONTENT="(ns $NS)\n\n(def ^:private -ns- *ns*)"
+SRC_CONTENT="(ns $NS)\n\n(def ^:private -ns- *ns*)\n(set! *warn-on-reflection* true)"
 
 TEST_FILE=${VALID_TEST_NS//./\/}
 TEST_FILE="src/test/${LANG_DIR}/${TEST_FILE}.clj"
