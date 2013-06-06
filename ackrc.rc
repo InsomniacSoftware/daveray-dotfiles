@@ -1,1 +1,4 @@
 --ignore-dir=autodoc
+--ignore-dir=target
+--ignore-dir=bin
+--ignore-dir=build
