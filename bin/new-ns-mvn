@@ -25,7 +25,18 @@ TEST_FILE=${VALID_TEST_NS//./\/}
 TEST_FILE="src/test/${LANG_DIR}/${TEST_FILE}.clj"
 TEST_DIR=$(dirname $TEST_FILE)
 NS_ALIAS=${NS##*.}
-TEST_CONTENT="(ns $TEST_NS\n  (:use $NS)\n  (:require [clojure.test :refer [deftest testing is]]))\n"
+TEST_CONTENT="(ns $TEST_NS\n  (:require [$NS :as $NS_ALIAS])\n  (:require [clojure.test :refer [deftest testing is]]))\n"
+
+if [ -f $SRC_FILE ]; then
+  echo "$SRC_FILE already exists"
+  exit 1
+fi
+
+if [ -f $TEST_FILE ]; then
+  echo "$TEST_FILE already exists"
+  exit 1
+fi
+
 
 echo "$SRC_FILE"
 mkdir -p $SRC_DIR

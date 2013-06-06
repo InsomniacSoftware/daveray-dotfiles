@@ -18,6 +18,16 @@ TEST_DIR=$(dirname $TEST_FILE)
 NS_ALIAS=${NS##*.}
 TEST_CONTENT="(ns $TEST_NS\n  (:require [$NS :as $NS_ALIAS]\n            [clojure.test :refer [deftest testing is]]))\n\n#_(clojure.test/run-tests)\n"
 
+if [ -f $SRC_FILE ]; then
+  echo "$SRC_FILE already exists"
+  exit 1
+fi
+
+if [ -f $TEST_FILE ]; then
+  echo "$TEST_FILE already exists"
+  exit 1
+fi
+
 mkdir -p $SRC_DIR
 echo -e $SRC_CONTENT > $SRC_FILE
 
