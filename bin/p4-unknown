@@ -4,10 +4,15 @@ find . -type f ! -name '*~' -print0 | \
   awk '/no such file/{print $1}' | \
   grep -v '/.ivy2.cache/' | \
   grep -v '/build/classes/' | \
+  grep -v '/build/libs/' | \
+  grep -v '/build/reports/' | \
+  grep -v '/build/tmp/' | \
+  grep -v '/build/test-results/' | \
   grep -v '/classes/' | \
   grep -v '/bin/' | \
   grep -v '/target/' | \
   grep -v '/dist/' | \
+  grep -v '/.gradle/' | \
   grep -v '\.class$' | \
   grep -v '\.sw[op]$'
 
