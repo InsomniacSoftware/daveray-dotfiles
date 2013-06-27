@@ -1,9 +1,11 @@
 #!/bin/sh
 
-if [ -f nrepl.sh ]; then
+NREPL_SH=`upfind -name nrepl.sh`
+if [ -n $NREPL_SH ]; then
   NREPL_PORT=`unused-port`
   gvim -c "let nreplPort=\"$NREPL_PORT\"" $* &
-  ./nrepl.sh $NREPL_PORT
+  echo "executing: $NREPL_SH $NREPL_PORT"
+  $NREPL_SH $NREPL_PORT
 elif [ -f project.clj ]; then
   gvim $* &
   lein repl
