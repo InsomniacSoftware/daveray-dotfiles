@@ -73,6 +73,7 @@ function title() {
     [ $ansiNrTab ] && echo -n $'\e'"]$ansiNrTab;$1"$'\a'
     # If terminal support separate window title, change window title as well
     [ $ansiNrWindow -a "$2" ] && echo -n $'\e'"]$ansiNrWindow;$2"$'\a'
+    [ $TMUX ] && tmux rename-window $1
 }
 
 function p() {

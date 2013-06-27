@@ -43,7 +43,10 @@
   autosetupmerge = true
 
 [merge]
-  tool = vimdiff3
+  # This was "vimdiff3" but git for some reason ignored that. Yay.
+  tool = vd3
 
-[mergetool "vimdiff3"]
+[mergetool "vd3"]
   cmd = gvim --nofork -d  -c \"wincmd J\" \"$MERGED\" \"$BASE\" \"$LOCAL\" \"$REMOTE\"
+
+# vim: ft=gitconfig

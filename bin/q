@@ -20,6 +20,9 @@ case "$1" in
   go)
     url=http://go/$2
     ;;
+  stash)
+    url=https://stash.corp.netflix.com/projects/SOCIAL/repos/$2
+    ;;
   ds)
     shift
     all=$@
