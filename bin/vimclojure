@@ -1,7 +1,10 @@
 #!/bin/sh
 
-
-if [ -f project.clj ]; then
+if [ -f nrepl.sh ]; then
+  NREPL_PORT=`unused-port`
+  gvim -c "let nreplPort=\"$NREPL_PORT\"" $* &
+  ./nrepl.sh $NREPL_PORT
+elif [ -f project.clj ]; then
   gvim $* &
   lein repl
 elif [ -f build.gradle ]; then
