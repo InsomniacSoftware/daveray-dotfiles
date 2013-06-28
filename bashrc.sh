@@ -40,6 +40,7 @@ alias tmux="tmux -2"
 bind Space:magic-space
 
 source $HOME/.dotfiles/git-completion.bash
+source $HOME/.dotfiles/git-prompt.sh
 source $HOME/.dotfiles/hg-completion.bash
 source $HOME/.dotfiles/lein-completion.bash
 # https://raw.github.com/skybert/my-little-friends/master/bash_completion.d/p4
