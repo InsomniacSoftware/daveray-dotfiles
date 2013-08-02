@@ -1,0 +1,47 @@
+#!/bin/bash
+# new-ns-mvn com.foo.core, creates:
+#    src/main/clojure/com/foo/core.clj
+#    src/test/clojure/com/foo/core_test.clj
+# new-ns-mvn com.foo.core clj, creates:
+#    src/main/clj/com/foo/core.clj
+#    src/test/clj/com/foo/core_test.clj
+# with appropriate contents
+
+FQN=$1
+TEST_FQN="${FQN}Test"
+PACKAGE=${FQN%.*}
+CLASS=${FQN##*.}
+LANG_DIR=${2:-java}
+
+SRC_FILE=${FQN//./\/}
+SRC_FILE="src/main/${LANG_DIR}/${SRC_FILE}.java"
+SRC_DIR=$(dirname $SRC_FILE)
+SRC_CONTENT="package $PACKAGE;\n\npublic class ${CLASS} {\n\n}\n"
+
+TEST_FILE=${TEST_FQN//./\/}
+TEST_FILE="src/test/${LANG_DIR}/${TEST_FILE}.java"
+TEST_DIR=$(dirname $TEST_FILE)
+TEST_CONTENT="package $PACKAGE;\n\nimport static org.junit.Assert.*;\nimport org.junit.Test;\n\npublic class ${CLASS}Test {\n\n}\n"
+
+if [ -f $SRC_FILE ]; then
+  echo "$SRC_FILE already exists"
+  exit 1
+fi
+
+if [ -f $TEST_FILE ]; then
+  echo "$TEST_FILE already exists"
+  exit 1
+fi
+
+echo "$SRC_FILE"
+mkdir -p $SRC_DIR
+echo -e $SRC_CONTENT > $SRC_FILE
+
+echo "$TEST_FILE"
+mkdir -p $TEST_DIR
+
+IFS='%'
+echo -e $TEST_CONTENT > $TEST_FILE
+unset IFS
+
+# vim:ft=sh
