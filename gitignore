@@ -1,5 +1,7 @@
 .*.swp
 .*.swo
+.*.swn
+nrepl.sh
 .DS_Store?
 ehthumbs.db
 Icon?
