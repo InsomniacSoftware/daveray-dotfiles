@@ -1,0 +1,5 @@
+#!/bin/sh
+HOST=`eureka $* | sed 's/http:\/\///' | sed 's/:7001//'`
+PORT=9999
+echo $HOST:$PORT
+lein repl :connect $HOST:$PORT
