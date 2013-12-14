@@ -40,15 +40,12 @@ alias tmux="tmux -2"
 bind Space:magic-space
 
 source $HOME/.dotfiles/git-completion.bash
-source $HOME/.dotfiles/git-prompt.sh
+source $HOME/.dotfiles/gitprompt.sh
 source $HOME/.dotfiles/hg-completion.bash
 source $HOME/.dotfiles/lein-completion.bash
 # https://raw.github.com/skybert/my-little-friends/master/bash_completion.d/p4
 source $HOME/.dotfiles/p4-completion.bash
 source $HOME/.dotfiles/project-completion.bash
-
-
-export GIT_PS1_SHOWDIRTYSTATE=true
 
 yellow='\033[1;33m'
 green='\033[1;32m'
@@ -57,9 +54,10 @@ blue='\033[1;34m'
 cyan='\033[1;36m'
 fgcolor="\033[0m" # unsets color to term's fg color
 
-gitprompt='$(__git_ps1 "[%s]")'
 hgprompt='`hg prompt "[{branch}{status}{update}]" 2> /dev/null`'
-export PS1="\[$yellow\][\!,\$?] \[$blue\]\W \[$cyan\]${hgprompt}\[$green\]${gitprompt}\[$fgcolor\]\$ "
+
+export GIT_PROMPT_START="\[$yellow\][\!,\$?] \[$blue\]\W \[$cyan\]${hgprompt}"
+export GIT_PROMPT_END="\$ "
 
 # Set terminal title
 # @param string $1  Tab/window title
