@@ -2,9 +2,7 @@
 # https://github.com/magicmonty/bash-git-prompt
 function async_run()
 {
-  {
-    $1 &> /dev/null
-  }&
+    ($1 &> /dev/null &)
 }
 
 function git_prompt_dir()
@@ -110,8 +108,7 @@ function checkUpstream() {
   if [[ ! -e "${FETCH_HEAD}"  ||  -e `find "${FETCH_HEAD}" -mmin +${GIT_PROMPT_FETCH_TIMEOUT}` ]]
   then
     if [[ -n $(git remote show) ]]; then
-      async_run "git fetch --quiet"
-      disown -h
+      (git fetch --quiet &> /dev/null &)
     fi
   fi
 }
