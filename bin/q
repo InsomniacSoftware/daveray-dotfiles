@@ -17,6 +17,9 @@ case "$1" in
   lrepl)
     url=http://localhost:7001/repl/
     ;;
+  lc)
+    url=http://localhost:8077
+    ;;
   go)
     url=http://go/$2
     ;;
