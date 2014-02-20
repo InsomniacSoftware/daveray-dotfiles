@@ -30,6 +30,9 @@ if [ `uname` == "Darwin" ]; then
   alias p4v="open -a p4v"
 fi
 
+# Make sure gradle puts its stuff in the right place
+export GRADLE_USER_HOME="$HOME/.gradle"
+
 # Nicer grep
 alias grep='grep --color=auto'
 
@@ -38,6 +41,7 @@ alias tmux="tmux -2"
 
 # Space will auto-expand history expressions
 bind Space:magic-space
+
 
 source $HOME/.dotfiles/git-completion.bash
 source $HOME/.dotfiles/gitprompt.sh
