@@ -30,6 +30,9 @@
 ;; If something changes outside emacs, reload it
 (global-auto-revert-mode 1)
 
+;; Find unbound keys
+(require 'unbound)
+
 ;; Set up theme and appearance
 (load-theme 'desert t)
 
@@ -68,4 +71,6 @@
  '(hl-line ((t (:underline "yellow")))))
 
 (setq initial-frame-alist '((top . 0) (left . 0) (width . 100) (height . 50)))
+
+(load "~/.emacs.d/notes.el")
 
