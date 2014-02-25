@@ -1,0 +1,5 @@
+#!/bin/sh
+# Sad attempt to achieve the following:
+# * Open Emacs on top
+# * Open Emacs with initial working directory as the current dir
+open -n -a /Applications/Emacs.app/Contents/MacOS/Emacs "$@" --args --eval "(cd \"`pwd`\")"

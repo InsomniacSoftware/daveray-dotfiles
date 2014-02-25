@@ -5,6 +5,9 @@ DOTFILES=$PWD
 echo -e "\nsource $DOTFILES/bashrc.sh\n" >> $TARGET/.bashrc
 ln -s $DOTFILES/inputrc.rc $TARGET/.inputrc
 
+# emacs
+ln -s $DOTFILES/emacs.d $TARGET/.emacs.d
+
 # ack
 ln -s $DOTFILES/ackrc.rc $TARGET/.ackrc
 
