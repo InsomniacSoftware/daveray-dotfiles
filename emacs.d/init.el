@@ -4,6 +4,8 @@
 (require 'package)
 (add-to-list 'package-archives
              '("marmalade" . "http://marmalade-repo.org/packages/"))
+(add-to-list 'package-archives
+     '("melpa" . "http://melpa.milkbox.net/packages/") t)
 (package-initialize)
 
 (when (not package-archive-contents)
@@ -35,10 +37,13 @@
 
 ;; Set up theme and appearance
 (load-theme 'desert t)
+(add-to-list 'default-frame-alist '(font . "DejaVu Sans Mono-13"))
 
 ;; Always show line numbers
 (global-linum-mode t)
 (setq linum-format "%d ")
+(column-number-mode)
+(setq-default fill-column 120)
 
 ;; Initialize auto-complete
 (require 'auto-complete)
@@ -70,7 +75,24 @@
  ;; If there is more than one, they won't work right.
  '(hl-line ((t (:underline "yellow")))))
 
+;;############################################################################
+
 (setq initial-frame-alist '((top . 0) (left . 0) (width . 100) (height . 50)))
 
+;;###########################################################################
+
+(defun move-cursor-next-pane ()
+  "Move cursor to the next pane."
+  (interactive)
+  (other-window 1))
+
+(defun move-cursor-previous-pane ()
+  "Move cursor to the previous pane."
+  (interactive)
+  (other-window -1))
+(global-set-key (kbd "C-2") 'move-cursor-previous-pane)
+(global-set-key (kbd "C-3") 'move-cursor-next-pane)
+
+;;###################################################################
 (load "~/.emacs.d/notes.el")
 
