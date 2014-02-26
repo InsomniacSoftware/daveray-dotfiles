@@ -90,9 +90,11 @@
   "Move cursor to the previous pane."
   (interactive)
   (other-window -1))
-(global-set-key (kbd "C-2") 'move-cursor-previous-pane)
-(global-set-key (kbd "C-3") 'move-cursor-next-pane)
+
+(global-set-key (kbd "C-,") 'move-cursor-previous-pane)
+(global-set-key (kbd "C-.") 'move-cursor-next-pane)
 
 ;;###################################################################
+(load "~/.emacs.d/workspace.el")
 (load "~/.emacs.d/notes.el")
 
