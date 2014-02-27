@@ -46,7 +46,7 @@
 
 ;; Configure auto-fill, i.e. kill it
 (setq-default fill-column 120)
-
+(turn-off-auto-fill)
 
 ;; Initialize auto-complete
 (require 'auto-complete)
