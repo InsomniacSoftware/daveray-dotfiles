@@ -43,14 +43,19 @@
 (global-linum-mode t)
 (setq linum-format "%d ")
 (column-number-mode)
+
+;; Configure auto-fill, i.e. kill it
 (setq-default fill-column 120)
+
 
 ;; Initialize auto-complete
 (require 'auto-complete)
 (global-auto-complete-mode)
-(add-hook 'nrepl-mode-hook 'ac-nrepl-setup)
-(add-hook 'nrepl-interaction-mode-hook 'ac-nrepl-setup)
-(add-hook 'clojure-nrepl-mode-hook 'ac-nrepl-setup)
+(require 'ac-nrepl)
+(add-hook 'cider-repl-mode-hook 'ac-nrepl-setup)
+(add-hook 'cider-mode-hook 'ac-nrepl-setup)
+(eval-after-load "auto-complete"
+  '(add-to-list 'ac-modes 'cider-repl-mode))
 
 ;; find in project
 (require 'find-file-in-project)
