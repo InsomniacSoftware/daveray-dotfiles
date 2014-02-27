@@ -97,4 +97,4 @@
 ;;###################################################################
 (load "~/.emacs.d/workspace.el")
 (load "~/.emacs.d/notes.el")
-
+(load "~/.emacs.d/clojure.el")
