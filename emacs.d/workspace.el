@@ -47,6 +47,17 @@
     (if r
         (jump-to-register r))))
 
+(defun ws-delete-workspace ()
+  "Delete the current workspace"
+  (interactive)
+  (let* ((w ws-current-workspace)
+         (r (gethash 'reg w))
+         (i (gethash 'index w))
+         (next (ws-next-workspace* i i -1)))
+    (when (not (eq i next))
+      (ws-switch-to-workspace next)
+      (set-register r nil))))
+
 (defun ws-switch-to-workspace* (i copy?)
   (let* ((w (gethash i ws-workspaces))
         (r (gethash 'reg w))
@@ -101,6 +112,7 @@
 (global-set-key (kbd "M-~") (lambda () (interactive) (ws-cycle-workspace -1)))
 (global-set-key (kbd "C-`") (lambda () (interactive) (ws-restore-workspace)))
 (global-set-key (kbd "C-~") (lambda () (interactive) (ws-save-workspace)))
+(global-set-key (kbd "M-0") (lambda () (interactive) (ws-delete-workspace)))
 (global-set-key (kbd "M-1") (lambda () (interactive) (ws-switch-to-workspace 1)))
 (global-set-key (kbd "M-2") (lambda () (interactive) (ws-switch-to-workspace 2)))
 (global-set-key (kbd "M-3") (lambda () (interactive) (ws-switch-to-workspace 3)))
