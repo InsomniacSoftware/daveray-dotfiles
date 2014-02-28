@@ -4,4 +4,4 @@ emacs.d/backups/
 emacs.d/elpa/
 emacs.d/places
 emacs.d/vendor/*.elc
-
+emacs.d/auto-save-list/
