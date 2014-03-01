@@ -45,7 +45,7 @@
 (column-number-mode)
 
 ;; Configure auto-fill, i.e. kill it
-(setq-default fill-column 120)
+(setq-default fill-column 80)
 (turn-off-auto-fill)
 
 ;; Initialize auto-complete
