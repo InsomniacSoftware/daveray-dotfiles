@@ -18,7 +18,8 @@
                       clojure-mode
                       clojure-test-mode
                       cider
-                      ac-nrepl))
+                      ac-nrepl
+                      find-file-in-project))
 
 (dolist (p my-packages)
   (when (not (package-installed-p p))
@@ -60,6 +61,18 @@
 ;; find in project
 (require 'find-file-in-project)
 (global-set-key (kbd "C-x f") 'find-file-in-project)
+(eval-after-load 'find-file-in-project
+  '(progn
+     ;(setq ffip-project-file '("build.gradle" ".project" ".git"))
+     (setq ffip-limit 3000)
+     (setq ffip-patterns
+           (append ffip-patterns
+                   '("*.properties" "*.java" "*.xml" "*.vim")))
+     (setq ffip-find-options (concat "-not -regex \".*/bin/.*\" "
+                                     "-not -regex \".*/classes/.*\" "
+                                     "-not -regex \".*/target/.*\" "
+                                     "-not -regex \".*/.gradle/.*\" "
+                                     "-not -regex \".*/build/.*\" "))))
 
 ;; Rainbow delims
 (require 'rainbow-delimiters)
