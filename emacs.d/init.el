@@ -48,6 +48,10 @@
 ;; Configure auto-fill, i.e. kill it
 (setq-default fill-column 80)
 (turn-off-auto-fill)
+(remove-hook 'text-mode-hook #'turn-on-auto-fill)
+
+;; Die flyspell
+(remove-hook 'text-mode-hook #'turn-on-flyspell)
 
 ;; Initialize auto-complete
 (require 'auto-complete)
