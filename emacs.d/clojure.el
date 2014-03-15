@@ -6,8 +6,8 @@
   Be careful."
   (interactive)
   (let* ((ns (cider-current-ns))
-         (n (cider-eval-and-get-value "(clojure.core/let [ns *ns*] (clojure.core/binding [*ns* (find-ns 'clojure.core)] (count (mapv #(ns-unmap ns %) (keys (ns-interns ns))))))")))
-    (message "Cleared %d symbols from %s" n ns)))
+         (n (cider-eval-and-get-value "(clojure.core/let [ns *ns*] (clojure.core/binding [*ns* (clojure.core/find-ns 'clojure.core)] [(str ns) (count (mapv #(ns-unmap ns %) (keys (ns-interns ns))))]))")))
+    (message "Cleared %s symbols from %s" n ns)))
 
 (if nil (defun my-clojure-mode-keys ()
    "Add some keymaps in Clojure mode"
