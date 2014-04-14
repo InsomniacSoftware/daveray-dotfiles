@@ -19,7 +19,10 @@
                       clojure-test-mode
                       cider
                       ac-nrepl
-                      find-file-in-project))
+                      flx-ido
+                      projectile
+                      ;;find-file-in-project
+                      ))
 
 (dolist (p my-packages)
   (when (not (package-installed-p p))
@@ -42,7 +45,7 @@
 
 ;; Always show line numbers
 (global-linum-mode t)
-(setq linum-format "%d ")
+(setq linum-format "%3d ")
 (column-number-mode)
 
 ;; Configure auto-fill, i.e. kill it
@@ -62,21 +65,19 @@
 (eval-after-load "auto-complete"
   '(add-to-list 'ac-modes 'cider-repl-mode))
 
-;; find in project
-(require 'find-file-in-project)
-(global-set-key (kbd "C-x f") 'find-file-in-project)
-(eval-after-load 'find-file-in-project
-  '(progn
-     ;(setq ffip-project-file '("build.gradle" ".project" ".git"))
-     (setq ffip-limit 3000)
-     (setq ffip-patterns
-           (append ffip-patterns
-                   '("*.properties" "*.java" "*.xml" "*.vim")))
-     (setq ffip-find-options (concat "-not -regex \".*/bin/.*\" "
-                                     "-not -regex \".*/classes/.*\" "
-                                     "-not -regex \".*/target/.*\" "
-                                     "-not -regex \".*/.gradle/.*\" "
-                                     "-not -regex \".*/build/.*\" "))))
+;; flx-ido
+;; https://github.com/lewang/flx
+(require 'flx-ido)
+(ido-mode 1)
+(ido-everywhere 1)
+(flx-ido-mode 1)
+;; disable ido faces to see flx highlights.
+(setq ido-use-faces nil)
+
+;; projectile
+;; https://github.com/bbatsov/projectile
+(projectile-global-mode)
+
 
 ;; Rainbow delims
 (require 'rainbow-delimiters)
