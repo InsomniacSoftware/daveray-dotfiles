@@ -3,11 +3,7 @@ find . -type f ! -name '*~' -print0 | \
   xargs -0 p4 fstat 2>&1 | \
   awk '/no such file/{print $1}' | \
   grep -v '/.ivy2.cache/' | \
-  grep -v '/build/classes/' | \
-  grep -v '/build/libs/' | \
-  grep -v '/build/reports/' | \
-  grep -v '/build/tmp/' | \
-  grep -v '/build/test-results/' | \
+  grep -v '/build/' | \
   grep -v '/classes/' | \
   grep -v '/bin/' | \
   grep -v '/target/' | \
