@@ -95,7 +95,7 @@ function setGitPrompt() {
     return
   fi
 
-  checkUpstream
+  #checkUpstream
   updatePrompt
 }
 

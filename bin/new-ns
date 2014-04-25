@@ -1,10 +1,14 @@
 #!/bin/bash
 # Yes, this should be a lein plugin
+# new-ns com.foo.core, creates:
+#    src/com/foo/core.clj
+#    test/com/foo/core_test.clj
+# with appropriate contents
 
 NS=$1
 VALID_NS=${NS//-/_}
 
-TEST_NS=`echo $NS | sed 's/^\([^.]*\)/\1.test/'`
+TEST_NS=`echo $NS | sed 's/\(.*\)\.\([^.]*\)$/\1.\2-test/'`
 VALID_TEST_NS=${TEST_NS//-/_}
 
 SRC_FILE=${VALID_NS//./\/}
@@ -16,7 +20,7 @@ TEST_FILE=${VALID_TEST_NS//./\/}
 TEST_FILE="test/${TEST_FILE}.clj"
 TEST_DIR=$(dirname $TEST_FILE)
 NS_ALIAS=${NS##*.}
-TEST_CONTENT="(ns $TEST_NS\n  (:require [$NS :as $NS_ALIAS]\n            [clojure.test :refer [deftest testing is are]]))\n"
+TEST_CONTENT="(ns $TEST_NS\n  (:require [$NS :as $NS_ALIAS]\n            [clojure.test :refer [deftest testing is]]))\n"
 
 if [ -f $SRC_FILE ]; then
   echo "$SRC_FILE already exists"
@@ -28,9 +32,12 @@ if [ -f $TEST_FILE ]; then
   exit 1
 fi
 
+
+echo "$SRC_FILE"
 mkdir -p $SRC_DIR
 echo -e $SRC_CONTENT > $SRC_FILE
 
+echo "$TEST_FILE"
 mkdir -p $TEST_DIR
 
 IFS='%'

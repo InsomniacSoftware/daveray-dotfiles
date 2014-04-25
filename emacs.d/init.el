@@ -59,6 +59,7 @@
 ;; Initialize auto-complete
 (require 'auto-complete)
 (global-auto-complete-mode)
+(setq ac-auto-start 0.6) ; nrepl is way to slow so delay ac
 (require 'ac-nrepl)
 (add-hook 'cider-repl-mode-hook 'ac-nrepl-setup)
 (add-hook 'cider-mode-hook 'ac-nrepl-setup)
@@ -121,3 +122,4 @@
 (load "~/.emacs.d/workspace.el")
 (load "~/.emacs.d/notes.el")
 (load "~/.emacs.d/clojure.el")
+(load "~/.emacs.d/haskell.el")
