@@ -23,6 +23,9 @@ case "$1" in
   lc)
     url="-a '$CHROME' http://localhost:8077"
     ;;
+  bh)
+    url=https://beehive2.netflix.com/movie/search/titleOrMovieId/$2
+    ;;
   go)
     url=http://go/$2
     ;;

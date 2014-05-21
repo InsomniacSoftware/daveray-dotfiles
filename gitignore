@@ -14,3 +14,7 @@ Thumbs.db
 *.so
 *.pyc
 .lein-deps-sum
+.projections.json
+src/user.clj
+src/main/clojure/user.clj
+/ptmp
