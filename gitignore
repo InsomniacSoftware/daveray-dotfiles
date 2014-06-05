@@ -1,6 +1,7 @@
 .*.swp
 .*.swo
 .*.swn
+.*.swm
 nrepl.sh
 .DS_Store?
 ehthumbs.db
@@ -18,3 +19,5 @@ Thumbs.db
 src/user.clj
 src/main/clojure/user.clj
 /ptmp
+/.idea
+*.iml
