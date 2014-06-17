@@ -10,5 +10,7 @@ find . -type f ! -name '*~' -print0 | \
   grep -v '/dist/' | \
   grep -v '/.gradle/' | \
   grep -v '\.class$' | \
-  grep -v '\.sw[op]$'
+  grep -v '\.sw[op]$' | \
+  grep -v '/\.idea/' | \
+  grep -v '\.iml$'
 
