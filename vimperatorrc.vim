@@ -1,1 +1,1 @@
-autocmd LocationChange .* js modes.passAllKeys = /(twitter\.com|(mail)\.google\.com)/.test(buffer.URL)
+autocmd LocationChange .* js modes.passAllKeys = /(twitter\.com|(mail|docs)\.google\.com)/.test(buffer.URL)
