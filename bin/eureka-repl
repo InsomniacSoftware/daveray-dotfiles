@@ -1,5 +1,14 @@
 #!/bin/sh
-HOST=`eureka $* | sed 's/http:\/\///' | sed 's/:7001//'`
+if [ -z $1 ]; then
+  echo "eureka-repl <region> <env> <service>"
+  exit 0
+fi
+HOST=`eureka $*`
 PORT=9999
+if [ -z $HOST ]; then
+  echo "Couldn't find host for: $*"
+  exit 1
+fi
+
 echo $HOST:$PORT
 lein repl :connect $HOST:$PORT

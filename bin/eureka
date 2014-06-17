@@ -1,7 +1,15 @@
 #!/bin/sh
+if [ -z $1 ]; then
+  echo "eureka <region> <env> <service>"
+  exit 0
+fi
 
+# eureka <region> <env> <service>
 # eureka test service
 # eureka prod service
 curl -s -i \
-    http://us-east-1.discovery$([ "$1" == "test" ] && echo "test" || echo "prod").netflix.net:7001/discovery/resolver/${2}/ \
-  | perl -n -e '/^Location: (.+)\// && print $1'
+    http://$1.discovery$([ "$2" == "test" ] && echo "test" || echo "prod").netflix.net:7001/discovery/resolver/${3}/ \
+  | perl -n -e '/^Location: (.+)\// && print $1' \
+  | sed 's/http:\/\///' \
+  | sed 's/:7001//'
+
