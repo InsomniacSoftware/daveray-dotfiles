@@ -1,7 +1,4 @@
-.*.swp
-.*.swo
-.*.swn
-.*.swm
+.*.sw[a-z]
 nrepl.sh
 .DS_Store?
 ehthumbs.db
